@@ -17,5 +17,4 @@
     // --PASO : llamar a la funcion antes de pasarla a otro archivo
     $conexion = connect();
 
-
 ?>

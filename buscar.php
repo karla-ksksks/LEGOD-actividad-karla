@@ -12,14 +12,14 @@ if (isset($_GET['busqueda'])) {
             FROM sets 
             WHERE name LIKE '%" . $texto_buscado . "%'";
 
-    $resultado_query = mysqli_query($conexion, $sql);
+    $resultado_query = mysqli_query(connect(), $sql);
     
     if ($resultado_query) {
         while ($fila = mysqli_fetch_assoc($resultado_query)) {
             $theme_id = $fila["theme_id"];
             
             $sql2 = "SELECT name FROM themes WHERE theme_id = $theme_id";
-            $query2 = mysqli_query($conexion, $sql2);
+            $query2 = mysqli_query(connect(), $sql2);
             
             if ($query2) {
                 $res = mysqli_fetch_assoc($query2);
