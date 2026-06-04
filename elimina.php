@@ -6,7 +6,9 @@
     {
         $id_set= $_POST["set_a_eliminar"];
         $sql="DELETE FROM sets WHERE set_num=''$id_set";
-        $query=mysqli_query($conexion, $sql);//regresa el objeto iterable
+
+        //mysqli_query--->regresa el objeto iterable
+        $query=mysqli_query($conexion, $sql);
         if($query)
         {
             $mensaje="la eliminación fue correcta";
